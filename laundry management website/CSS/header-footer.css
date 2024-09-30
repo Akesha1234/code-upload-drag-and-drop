@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: whitesmoke;
+  color: black; /* Changed to black for normal text */
+}
+
+/* Header Section */
+header {
+  background-color: #0d47a1;
+  position: relative;
+  top: 0;
+  z-index: 10;
+  position: sticky;
+}
+
+#small-navbar {
+  color: white;
+  background-color: #1565c0; /* Changed to a medium blue */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #0d47a1; /* Changed to a darker blue */
+  width: 100vw;
+  height: fit-content;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+#small-navbar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 30px;
+}
+
+#login-link {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+#small-navbar span:nth-of-type(1),
+#small-navbar span:nth-of-type(3) {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+#small-navbar :nth-child(2) {
+  display: inline-block;
+  margin-left: auto;
+}
+
+#main-navbar {
+  background-color: #0d47a1; /* Changed to a darker blue */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+#main-navbar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 40px;
+  font-size: 18px;
+  position: relative; /* Add relative positioning */
+}
+
+#main-navbar a::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start from the center */
+  right: 50%; /* Start from the center */
+  bottom: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #b3e5fc; /* Match the underline color */
+  visibility: hidden; /* Initially hide the underline */
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out; /* Corrected transition */
+}
+
+#main-navbar a:hover::after {
+  visibility: visible; /* Show underline on hover */
+  left: 0; /* Spread to the left */
+  right: 0; /* Spread to the right */
+}
+
+#main-navbar span:nth-of-type(2) {
+  margin-left: auto;
+}
+
+#logo-main-nav {
+  position: relative;
+  height: 70px;
+  margin-left: 50px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+#wash-basket,
+#account-button {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  transform: scale(1.5);
+  margin-left: 15px;
+  margin-top: -7px;
+}
+
+#wash-basket a:hover::after,
+#account-button a:hover::after {
+  visibility: hidden;
+}
+
+#socials-section {
+  background-color: #0d47a1;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+  padding: 0 50px;
+  color: white;
+}
+
+#company-logo {
+  height: 80px;
+  grid-row: 1/ -1;
+  margin: 40px auto 20px auto;
+}
+
+#socials-section h2 {
+  font-size: 22px;
+  padding: 0 22%;
+  margin-top: 0;
+  color: white;
+}
+
+.website-name-socials {
+  color: #ffd06d;
+  font-size: 24px;
+}
+
+#social-icons-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 16%;
+  margin: 10px auto 40px auto;
+}
+
+.social-icon-img-wrapper {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #cff0ff 0%, #b3acf2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  margin: 10px auto;
+}
+
+.social-icon-img-wrapper:hover {
+  background: linear-gradient(135deg, #ddf4ff 0%, #8580ad 100%);
+}
+
+.social-icon-img-wrapper img {
+  width: 45px;
+  border: 2px solid #cff0ff;
+  border-radius: 50%;
+}
+
+.social-icon-img-wrapper img:hover {
+  border: 2px solid #dcf3fe;
+  background-color: #f2f2f2; /* Added a suitable color for the image on hover */
+}
+
+#footer-content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: 60px auto;
+}
+
+.footer-content h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.footer-content a {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.751);
+}
+
+#mail-container,
+#phone-container {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer-icon {
+  height: 22px;
+  margin-right: 5%;
+}
+
+#footer-copyright {
+  border-top: 1px solid #ccc;
+  margin-top: 0%;
+  text-align: center;
+  font-size: 16px;
+}
